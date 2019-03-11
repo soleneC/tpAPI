@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "7c5c6471-fdd5-421d-b60d-d71d51d47e3f",
+		"name": "Tp Api documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/movies/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "get all movies from local database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies/0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "get one movie with id 0"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies/?movie=Inception",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "movie",
+							"value": "Inception",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/?movie=Inception",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "movie",
+							"value": "Inception"
+						}
+					]
+				},
+				"description": "add new movie from omdb database based on the movie's name"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies/0",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "movie",
+							"value": "Guardians of the Galaxy Vol. 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"0"
+					]
+				},
+				"description": "replace a movie (based on the id) from local database with a movie from omdb database (based on its name)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/movies/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "movie",
+							"value": "Guardians of the Galaxy Vol. 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"1"
+					]
+				},
+				"description": "delete a movie from local database based on its id"
+			},
+			"response": []
+		}
+	]
+}
